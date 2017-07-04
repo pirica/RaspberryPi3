@@ -21,4 +21,6 @@ C#
 
 1. https://www.maketecheasier.com/write-c-sharp-programs-raspberry-pi/
 
-2. 
+2. sudo apt-get install mono-complete
+
+3. 
