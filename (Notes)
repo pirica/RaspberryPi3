@@ -15,12 +15,63 @@ root@raspberrypi:~# \
 >     echo -e "$codec:\t$(vcgencmd codec_enabled $codec)" ; \
 > done
 
-###########################################################
+######################################################################################################################
+https://www.maketecheasier.com/write-c-sharp-programs-raspberry-pi/
 
-C#
+1. sudo apt-get install mono-complete   <Install Mono - C# common runtime .net compiler>
 
-1. https://www.maketecheasier.com/write-c-sharp-programs-raspberry-pi/
+2. nano /home/pi/hello.cs
 
-2. sudo apt-get install mono-complete
+/// Write a HelloWorld class
+using System;
+ 
+public class HelloWorld
+{
+    static public void Main ()
+    {
+        Console.WriteLine ("Hello Make Tech Easier");
+    }
+}
 
-3. 
+3. mcs hello.cs      <Compile hello.cs to C>
+
+4. file hello.exe
+
+5. nano hello.cs     <edit hello.cs file>
+
+######################################################################################################################
+
+ write GUI programs 
+ 
+ 1. sudo apt-get install gtk-sharp2   <Install install the bindings between Mono and GTK>
+ 
+ 2. nano /home/pi/hellogtk.cs
+ 
+using Gtk;
+using System;
+ 
+class Hello {
+ 
+        static void Main()
+        {
+                Application.Init ();
+ 
+                Window window = new Window ("Hello MTE");
+                window.Show();
+ 
+                Application.Run ();
+ 
+        }
+}
+
+3. mcs hellogtk.cs -pkg:gtk-sharp-2.0   <Using -pkg: flag to access GTK Sharp toolkit (Gtk#) and compile to executable)
+
+4. mono hello.exe
+
+######################################################################################################################
+
+1. sudo apt-get install monodevelop   <Install MonoDevelop>
+
+2. 
+
+ 
