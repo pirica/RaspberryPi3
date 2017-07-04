@@ -18,7 +18,28 @@ root@raspberrypi:~# \
 ######################################################################################################################
 https://www.maketecheasier.com/write-c-sharp-programs-raspberry-pi/
 
-1. sudo apt-get install mono-complete   <Install Mono - C# common runtime .net compiler>
+1-0. sudo apt-get install mono-devel  <Install mono-devel to compile code>
+
+1-1. sudo apt-get install mono-complete   <Install Mono - C# common runtime .net compiler>
+
+1-3. sudo apt-get install mono-dbg  <Install mono debuger to show line number>
+
+----------------------------------------------------------------------------------------------------------------------
+The package mono-devel should be installed to compile code.
+
+The package mono-complete should be installed to install everything - this should cover most cases of "assembly not found" errors.
+
+The package mono-dbg should be installed to get debugging symbols for framework libraries - allowing you to get line numbers in stack traces.
+
+The package referenceassemblies-pcl should be installed for PCL compilation support - this will resolve most cases of "Framework not installed: .NETPortable" errors during software compilation.
+
+The package ca-certificates-mono should be installed to get SSL certificates for HTTPS connections. Install this package if you run into trouble making HTTPS connections.
+
+The package mono-xsp4 should be installed for running ASP.NET applications.
+
+Ref:http://www.mono-project.com/download/
+Ref:http://www.monodevelop.com/
+----------------------------------------------------------------------------------------------------------------------
 
 2. nano /home/pi/hello.cs
 
