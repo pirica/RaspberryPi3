@@ -1,1 +1,24 @@
 ########################################################
+-Change config.txt
+sudo nano /boot/config.txt
+Ctrl + O && Enter to save
+
+-Timed Shutdown
+sudo shutdown –h 21:55
+
+-Display configurations 
+vcgencmd get_config int
+
+-display enabled code
+root@raspberrypi:~# \
+> for codec in H264 MPG2 WVC1 MPG4 MJPG WMV9 ; do \
+>     echo -e "$codec:\t$(vcgencmd codec_enabled $codec)" ; \
+> done
+
+###########################################################
+
+C#
+
+1. https://www.maketecheasier.com/write-c-sharp-programs-raspberry-pi/
+
+2. 
